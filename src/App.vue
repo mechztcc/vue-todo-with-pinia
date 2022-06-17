@@ -1,15 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="area">
+    <Header />
+    <StatusBar />
+    <Grid />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import StatusBar from './components/StatusBar.vue'
+import Grid from './components/Grid.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    StatusBar,
+    Grid
   }
 }
 </script>
@@ -20,7 +27,25 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #222831;
+}
+
+.area {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 </style>
